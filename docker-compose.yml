@@ -4,7 +4,7 @@ services:
     image: nginx:stable-alpine
     container_name: nginx
     ports:
-      - "8080:80"
+      - "80:80"
     volumes:
       - ./src:/var/www
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf
@@ -13,10 +13,10 @@ services:
     networks:
       - mlqnet
   node:
-    image: node-http-demo:1.0
+    image: node-server:2.0
     networks:
       mlqnet:
         aliases:
-          - video-compress
+          - node-server
 networks:
   mlqnet:

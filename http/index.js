@@ -1,6 +1,7 @@
 const http = require('http');
 
 let app = http.createServer((req, res) => {
+	console.log('收到请求');
 	res.write('hello');
 	res.end();
 });
