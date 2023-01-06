@@ -22,4 +22,5 @@ docker-compose down
 curl http://localhost:80s/api
 ```
 
-滚动更新还是需要 k8s 或者 docker swarm。 docker-compose 启动还是所有进程批量 recreate
+1. 滚动更新还是需要 k8s 或者 docker swarm。 docker-compose 启动还是所有进程批量 recreate
+2. docker-compose.yml 中直接修改 node-server 版本，通过 docker-compose up -d 启动服务，回自动切换到新版本，将旧版本删掉
